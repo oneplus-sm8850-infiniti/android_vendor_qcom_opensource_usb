@@ -26,7 +26,7 @@ else
 endif
 
 # QDSS uses SW path on these targets
-ifneq ($(filter bengal kona seraph lahaina taro anorak neo blair kalama pineapple sun parrot monaco trinket tuna kera crow pitti niobe volcano anorak61 neo61,$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter bengal kona seraph lahaina taro anorak neo blair kalama pineapple sun canoe parrot monaco trinket tuna kera crow pitti niobe volcano anorak61 neo61,$(TARGET_BOARD_PLATFORM)),)
   PRODUCT_PROPERTY_OVERRIDES += vendor.usb.qdss.inst.name=qdss_sw
 else
   PRODUCT_PROPERTY_OVERRIDES += vendor.usb.qdss.inst.name=qdss
@@ -66,7 +66,7 @@ else
   # USB Gadget HAL is enabled on newer targets and takes the place
   # of the init-based configfs rules for setting USB compositions
   #
-  ifneq ($(filter bengal kona seraph niobe taro anorak neo kalama pineapple sun parrot blair monaco trinket crow pitti volcano anorak61 neo61,$(TARGET_BOARD_PLATFORM)),)
+  ifneq ($(filter bengal kona seraph niobe taro anorak neo kalama pineapple sun canoe parrot blair monaco trinket crow pitti volcano anorak61 neo61,$(TARGET_BOARD_PLATFORM)),)
     PRODUCT_PROPERTY_OVERRIDES += vendor.usb.use_gadget_hal=1
     PRODUCT_PACKAGES += android.hardware.usb.gadget-service.qti
     PRODUCT_PACKAGES += usb_compositions.conf
